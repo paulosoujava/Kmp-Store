@@ -1,4 +1,4 @@
-package paulo.jorge.app.presenter.account
+package paulo.jorge.app.presenter.store.account
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
@@ -30,7 +30,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import paulo.jorge.app.Action
+
 
 @Composable
 fun ContentAccount(

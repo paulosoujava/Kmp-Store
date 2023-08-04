@@ -1,4 +1,4 @@
-package paulo.jorge.app.presenter.search
+package paulo.jorge.app.presenter.store.search
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

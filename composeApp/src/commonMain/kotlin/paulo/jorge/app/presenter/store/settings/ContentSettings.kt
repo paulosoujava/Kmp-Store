@@ -1,4 +1,4 @@
-package paulo.jorge.app.presenter.settings
+package paulo.jorge.app.presenter.store.settings
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues

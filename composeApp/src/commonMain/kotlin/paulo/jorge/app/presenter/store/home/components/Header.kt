@@ -1,4 +1,4 @@
-package paulo.jorge.app.presenter.home.components
+package paulo.jorge.app.presenter.store.home.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -23,7 +23,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun Header() {
+fun Header(
+    onBack: () -> Unit
+) {
     Row(
         modifier = Modifier
             .padding(10.dp)
@@ -35,7 +37,7 @@ fun Header() {
         verticalAlignment = Alignment.CenterVertically
     ) {
         IconButton(
-            onClick = {},
+            onClick = onBack,
         ) {
             Icon(
                 imageVector = Icons.Default.Menu,

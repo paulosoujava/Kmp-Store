@@ -1,4 +1,4 @@
-package paulo.jorge.app.presenter.home
+package paulo.jorge.app.presenter.store.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

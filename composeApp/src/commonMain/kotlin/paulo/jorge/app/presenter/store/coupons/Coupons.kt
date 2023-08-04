@@ -1,4 +1,4 @@
-package paulo.jorge.app.presenter.coupons
+package paulo.jorge.app.presenter.store.coupons
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
