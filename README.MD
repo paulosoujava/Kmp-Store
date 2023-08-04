@@ -1,22 +1,8 @@
 # Compose Multiplatform Application
 
-## Before running!
- - check your system with [KDoctor](https://github.com/Kotlin/kdoctor)
- - install JDK 8 on your machine
- - add `local.properties` file to the project root and set a path to Android SDK there
- - run `./gradlew podInstall` in the project root
+Assista o vídeo no linkedin:
+https://www.linkedin.com/posts/composejp_nubank-itau-santander-activity-7093207844727984128-AYZ6?utm_source=share&utm_medium=member_desktop
 
-### Android
-To run the application on android device/emulator:  
- - open project in Android Studio and run imported android run configuration
+Meu canal, que não é um canal:
+https://www.youtube.com/channel/UC-S5v5GpROEHP4PF1y9C4jg
 
-To build the application bundle:
- - run `./gradlew :composeApp:assembleDebug`
- - find `.apk` file in `composeApp/build/outputs/apk/debug/composeApp-debug.apk`
-
-### iOS
-To run the application on iPhone device/simulator:
- - Open `iosApp/iosApp.xcworkspace` in Xcode and run standard configuration
- - Or use [Kotlin Multiplatform Mobile plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) for Android Studio
-
-# Kmp-Store
