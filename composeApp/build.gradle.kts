@@ -55,6 +55,7 @@ kotlin {
                 implementation(libs.kotlinx.serialization.json)
                 implementation(libs.kotlinx.datetime)
                 implementation(libs.koin.core)
+                implementation(libs.realm.driver)
 
                 implementation("media.kamel:kamel-image:0.7.1")
             }

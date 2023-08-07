@@ -18,6 +18,7 @@ kotlinx-serialization = "1.5.1"
 kotlinx-datetime = "0.4.0"
 koin = "3.4.3"
 sqlDelight = "2.0.0"
+realm = "1.4.0"
 
 [libraries]
 
@@ -39,6 +40,7 @@ sqlDelight-driver-sqlite = { module = "app.cash.sqldelight:sqlite-driver", versi
 sqlDelight-driver-android = { module = "app.cash.sqldelight:android-driver", version.ref = "sqlDelight" }
 sqlDelight-driver-native = { module = "app.cash.sqldelight:native-driver", version.ref = "sqlDelight" }
 sqlDelight-driver-js = { module = "app.cash.sqldelight:web-worker-driver", version.ref = "sqlDelight" }
+realm-driver = { module = "io.realm.kotlin:library-sync", version.ref = "realm" }
 
 [plugins]
 
@@ -50,3 +52,4 @@ libres = { id = "io.github.skeptick.libres", version.ref = "libres" }
 buildConfig = { id = "com.github.gmazzo.buildconfig", version.ref = "buildConfig" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 sqlDelight = { id = "app.cash.sqldelight", version.ref = "sqlDelight" }
+realm = { id = "io.realm.kotlin", version.ref = "realm" }

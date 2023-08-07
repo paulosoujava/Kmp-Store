@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -19,6 +20,9 @@ import paulo.jorge.app.presenter.drag.DragViewModel
 import paulo.jorge.app.presenter.drag.DragableScreen
 
 import paulo.jorge.app.presenter.drag.MainScreen
+import paulo.jorge.app.presenter.game.snack.ScreenGame
+import paulo.jorge.app.presenter.game.tictactoe.GameScreen
+import paulo.jorge.app.presenter.game.tictactoe.GameViewModel
 import paulo.jorge.app.presenter.nubank.Nubank
 import paulo.jorge.app.presenter.store.MyBottomNavigation
 import paulo.jorge.app.theme.AppTheme
@@ -30,6 +34,8 @@ internal fun App() = AppTheme {
     val toggle = remember {
         mutableStateOf(0)
     }
+
+    val scope = rememberCoroutineScope()
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -60,9 +66,37 @@ internal fun App() = AppTheme {
                 ) {
                     Text(text = "Drag")
                 }
+                Button(
+                    onClick = {
+                        toggle.value = 4
+                    }
+                ) {
+                    Text(text = "Snack Game")
+                }
+                Button(
+                    onClick = {
+                        toggle.value = 5
+                    }
+                ) {
+                    Text(text = "Tic Tac Toe Game")
+                }
             }
         }
-
+        AnimatedVisibility(
+            visible = toggle.value == 5
+        ) {
+            val mainViewModel = getViewModel(
+                key = "tictactoe-view-model",
+                factory = viewModelFactory {
+                    GameViewModel()
+                }
+            )
+            GameScreen(
+                viewModel = mainViewModel
+            ){
+                toggle.value = 0
+            }
+        }
         AnimatedVisibility(
             visible = toggle.value == 3
         ) {
@@ -84,6 +118,15 @@ internal fun App() = AppTheme {
             visible = toggle.value == 1,
         ) {
             Nubank {
+                toggle.value = 0
+            }
+        }
+        AnimatedVisibility(
+            visible = toggle.value == 4,
+        ) {
+            ScreenGame(
+                scope
+            ) {
                 toggle.value = 0
             }
         }
